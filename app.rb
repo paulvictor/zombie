@@ -1,4 +1,6 @@
 require "sinatra"
+require "cgi"
+require "time"
 require_relative "models"
 
 configure do
@@ -15,6 +17,19 @@ end
 
 before do
   @started = File.exist?("/home/viktor/stuff/zombie/started")
+  @now = Time.now.to_s
+  @probe_present = File.exists?("/sys/bus/w1/devices/28-0000053c9d05/w1_slave") ? "present" : "not present"
+end
+
+post '/time' do
+  current_time = CGI.unescape(params[:current_time])
+  date, time = current_time.split("T")
+  y, m, d = date.split("-")
+  h, min = time.split(":")
+  new_time = Time.new(y, m, d, h, min)
+  new_time_str = new_time.to_s
+  `sudo date --set \"#{new_time_str}\"`
+  redirect "/"
 end
 
 get '/' do

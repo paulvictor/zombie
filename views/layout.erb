@@ -2,6 +2,14 @@
   <body>
     <a href="/">Home</a><br>
     <a href="/patients/new">New patient</a>
+    <br>
+    Time now is <%= Time.now.to_s %>
+    <form action="/time" method="post">
+       New date and time (date and time): <input id=new_time type="datetime-local" name="current_time">
+       <input type="submit">
+    </form>
+    <br>
+    Probe is <%= @probe_present %>
     <%= yield %>
   </body>
 </html>
