@@ -1,0 +1,21 @@
+<h1>New Patient</h1>
+<form action="/patients" method="post">
+  <label for="patient_name">Name:</label><br />
+  <input id="patient_name" name="patient[name]" type="text" value="<%= @patient.name %>" />
+  <br />
+
+  <label for="patient_mode_of_death">mode_of_death:</label><br />
+  <input id="patient_mode_of_death" name="patient[mode_of_death]" type="text" value="<%= @patient.mode_of_death %>" />
+  <br />
+
+  <label for="patient_gender">gender:</label><br />
+  <input id="m" name="patient[gender]" type="radio" value="male" />Male
+  <input id="f" name="patient[gender]" type="radio" value="female" />Female
+  <br />
+
+  <label for="patient_time_of_death">time of death in HH::MM format:</label><br />
+  <input id="tod" name="patient[time_of_death]" type="text" value="<%= @patient.time_of_death %>" />
+  <br />
+
+  <input type="submit" value="Create Patient" />
+</form>

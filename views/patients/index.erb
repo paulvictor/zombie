@@ -1,0 +1,15 @@
+<h1>Patient list</h1>
+<table>
+  </tr>
+<% @patients.each do |patient| %>
+  <tr>
+    <td><%= patient.id %></td>
+    <td><%= patient.name %></td>
+    <td><a href="/patients/<%= patient.id %>/plot">Generate chart</td>
+    <td><a href="/patients/<%= patient.id %>/values">Download values</td>
+  </tr>
+<% end %>
+</table>
+<form action="/stop_or_start" method="post">
+  <input type="submit" value="<%= @action_to_perform %>" />
+</form>

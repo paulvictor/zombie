@@ -1,0 +1,17 @@
+Patient has database id, hospital id, name, mode of death, time of death
+(Patient id X Minutes since epoch) = temperature
+
+Queries :
+
+Find patient by hospital id.
+Find temperatures for patient id over time
+
+
+List patients with name and hospital id.
+Against each patient, get a generate plot and get values button to download plot and values
+
+Stop button to stop recording temperatures.
+
+Stat button to start recording temperatures.
+
+while(true) loop which wakes every n secs to read temp and record.
