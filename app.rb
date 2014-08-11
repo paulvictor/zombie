@@ -10,6 +10,10 @@ configure do
 end
 
 before do
+  logger.level = 0
+end
+
+before do
   @started = File.exist?("started")
 end
 
