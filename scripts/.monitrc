@@ -1,0 +1,6 @@
+check process zombie with pidfile /home/viktor/stuff/zombie/tmp/pids/production.pid
+    start program = "/home/viktor/stuff/zombie/scripts/start-web-server.sh"
+        as uid viktor and gid viktor
+        with timeout 10 seconds
+    stop program = "/home/viktor/stuff/zombie/scripts/stop-web-server.sh"
+        as uid viktor and gid viktor
