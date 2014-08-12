@@ -4,3 +4,4 @@ vendor/
 started
 results/*
 sample.txt
+*.pid
