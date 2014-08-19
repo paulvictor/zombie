@@ -14,7 +14,7 @@ before do
 end
 
 before do
-  @started = File.exist?("started")
+  @started = File.exist?("/home/viktor/stuff/zombie/started")
 end
 
 get '/' do
@@ -71,10 +71,10 @@ post '/patient_temperatures' do
 end
 
 post '/stop_or_start' do
-  if File.exists?("started")
-    FileUtils.rm(["started"])
+  if File.exists?("/home/viktor/stuff/zombie/started")
+    FileUtils.rm(["/home/viktor/stuff/zombie/started"])
   else
-    FileUtils.touch(["started"])
+    FileUtils.touch(["/home/viktor/stuff/zombie/started"])
   end
   redirect "/"
 end

@@ -7,11 +7,11 @@ class Patient < ActiveRecord::Base
   has_many :patient_temperatures
   TIME_FMT = "%d/%m-%H:%M"
   def img_file_name
-    "results/plot-#{name}-#{id}.png"
+    "/home/viktor/stuff/zombie/results/plot-#{name}-#{id}.png"
   end
 
   def csv_file_name
-    "results/plot-#{name}-#{id}.csv"
+    "/home/viktor/stuff/zombie/results/plot-#{name}-#{id}.csv"
   end
 
   def plot_file

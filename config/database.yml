@@ -1,17 +1,17 @@
 development:
   adapter: sqlite3
-  database: db/dev-patients.sqlite3
+  database: /home/viktor/stuff/zombie/db/dev-patients.sqlite3
   pool: 5
   timeout: 5000
 
 test:
   adapter: sqlite3
-  database: db/test-patients.sqlite3
+  database: /home/viktor/stuff/zombie/db/test-patients.sqlite3
   pool: 5
   timeout: 5000
 
 production:
   adapter: sqlite3
-  database: db/prod-patients.sqlite3
+  database: /home/viktor/stuff/zombie/db/prod-patients.sqlite3
   pool: 5
   timeout: 5000
