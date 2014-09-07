@@ -22,7 +22,7 @@ class Patient < ActiveRecord::Base
      set output "#{img_file_name}"
      set key off
      set xlabel "Minutes"
-     set xtics autofreq 1
+     set xtics 1,10
      set xrange [0:#{pts.size - 1}]
      set ylabel "Temperature"
      set title "Temperature variation over time for #{name}"
