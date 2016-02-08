@@ -5,3 +5,4 @@ started
 results/*
 sample.txt
 *.pid
+node_modules/
